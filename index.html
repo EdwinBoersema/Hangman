@@ -31,23 +31,23 @@
         </div> -->
         <div class="row">
             <div class="col">
-                <div class="row">
+                <div class="row inputRow">
                     <form class="col">
                          <label for="">Guess A Letter</label>   
-                        <input type="text">
-                        <input type="button" class="btn btn-light" value="go!">
+                        <input type="text" id="guessLetterInput">
+                        <input id="guessLetterButton" type="button" class="btn btn-light" value="go!">
                     </form>
                     <form class="col">
                         <label for="">Guess The Word</label>
-                        <input type="text">
-                        <input type="button" class="btn btn-light" value="go!">
+                        <input type="text" id="guessWordInput">
+                        <input id="guessWordButton" type="button" class="btn btn-light" value="go!">
                     </form>
                 </div>
-                <div class="row">
+                <div class="row inputRow">
                     <div class="col">
                         <label for="wordInput">New Word</label>
-                        <input id="wordInput" name="wordInput" type="password">
-                        <input type="button" class="btn btn-light" value="go!">
+                        <input id="newWordInput" name="wordInput" type="password">
+                        <input id="newWordButton" type="button" class="btn btn-light" value="go!">
                     </div>
                     <div class="col">
                         <button id="reset" class="btn btn-light">Reset</button>
@@ -62,7 +62,7 @@
 
     </div>
 
-
+    
     <script src="main.js"></script>
 </body>
 </html>
