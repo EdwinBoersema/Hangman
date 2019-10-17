@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center">
+        <div id="title" class="row justify-content-center">
             <h1>Hangman</h1>
         </div>
         <div id="mysteryWordOutput" class="row justify-content-center">
@@ -20,16 +20,41 @@
             <span>R</span>
             <span>D</span>
         </div>
+        <!-- <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <input type="text" placeholder="Example">
+                    <input type="button" class="btn btn-primary">
+                </div>
+
+            </div>
+        </div> -->
         <div class="row">
             <div class="col">
                 <div class="row">
-
+                    <form class="col">
+                         <label for="">Guess A Letter</label>   
+                        <input type="text">
+                        <input type="button" class="btn btn-light" value="go!">
+                    </form>
+                    <form class="col">
+                        <label for="">Guess The Word</label>
+                        <input type="text">
+                        <input type="button" class="btn btn-light" value="go!">
+                    </form>
                 </div>
                 <div class="row">
-
+                    <div class="col">
+                        <label for="wordInput">New Word</label>
+                        <input id="wordInput" name="wordInput" type="password">
+                        <input type="button" class="btn btn-light" value="go!">
+                    </div>
+                    <div class="col">
+                        <button id="reset" class="btn btn-light">Reset</button>
+                    </div>
                 </div>
             </div>
-            <div class="col">
+            <div id="faults" class="col">
                 Faults
             </div>
         </div>
