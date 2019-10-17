@@ -1,5 +1,5 @@
 // declaring global variables
-var wordToGuess = "woord";
+var wordToGuess = "";
 var letterGuess = "";
 var wordGuess = "";
 var lives = 5;
