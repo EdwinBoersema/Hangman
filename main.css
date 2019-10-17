@@ -19,11 +19,22 @@ form {
 
 input[type="text"], input[type="password"] {
     width: 70%;
+    padding: 6px;
+    margin: 5px 0;
 }
 
 input[type="button"] {
     width: 20%;
     padding-left: 0;
+    margin: 5px auto 5px 0;
+    border-width: 2px;
+}
+
+label {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0 5px auto;
+    font-size: 1.25em;
 }
 
 .row {
@@ -34,6 +45,10 @@ input[type="button"] {
     background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 3px;
+}
+
+div.inputRow {
+    background: #292E49;
 }
 
 .col {
@@ -55,4 +70,11 @@ input[type="button"] {
     height: 400px;
     background: whitesmoke;
     text-align: center;
+}
+
+#reset {
+    height: 70%;
+    width: 100%;
+    margin: 5px;
+
 }
