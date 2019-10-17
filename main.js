@@ -9,6 +9,8 @@ guessLetterButton.addEventListener('click', function () {
     let letterInput = document.getElementById("guessLetterInput").value;
     console.log(letterInput);
     document.getElementById("guessLetterInput").value = "";
+    letterGuess = letterInput;
+    compare();
 });
 
 var guessWordButton = document.getElementById("guessWordButton");
@@ -39,5 +41,17 @@ function mysteryWord() {
     for(let i = 0; i < wordToGuess.length; i++) {
         console.log(wordToGuess[i]);
         $("#mysteryWordOutput").append("<span class='" + wordToGuess[i] + "'>" + "-" + "</span>");
+    }
+}
+
+// Function that compares the guessed Letter with each letter of the wordToGuess
+function compare() {
+    for(let i = 0; i < wordToGuess.length; i++){
+        let spanClass = $("span")[i].className;
+        // console.log(spanClass);
+        if(spanClass == letterGuess) {
+            console.log("succes");
+            $("span")[i].textContent = spanClass;
+        }
     }
 }
