@@ -46,12 +46,18 @@ function mysteryWord() {
 
 // Function that compares the guessed Letter with each letter of the wordToGuess
 function compare() {
+    let score = 0;
     for(let i = 0; i < wordToGuess.length; i++){
         let spanClass = $("span")[i].className;
-        // console.log(spanClass);
         if(spanClass == letterGuess) {
             console.log("succes");
             $("span")[i].textContent = spanClass;
+            score++;
         }
     }
+    console.log(score);
+    if(score == 0){
+        $("#faults")[0].append("X");
+    }
 }
+
