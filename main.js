@@ -4,7 +4,7 @@ var letterGuess = "";
 var wordGuess = "";
 var lives = 5;
 
-//adding listeners to the buttons and running functions when they're being clicked.
+//adding listeners to the buttons and running the appropriate functions when they're being clicked.
 var guessLetterButton = document.getElementById("guessLetterButton");
 guessLetterButton.addEventListener('click', function () {
     let letterInput = document.getElementById("guessLetterInput").value;
@@ -30,15 +30,14 @@ newWordButton.addEventListener('click', function () {
     mysteryWord();
 });
 
-document.getElementsByTagName("button")[0].addEventListener('click', function () {
-    console.log("connected reset button");
+document.getElementById("reset").addEventListener('click', function(){
+    reset();
+    console.log("Game reset!");
 });
 
 //function that puts the word to guess into an array and then puts that array into the spans.
 function mysteryWord() {
     $("#mysteryWordOutput").empty();
-    let spans = "";
-    let div = document.getElementById("mysteryWordOutput");
     for(let i = 0; i < wordToGuess.length; i++) {
         // console.log(wordToGuess[i]);
         $("#mysteryWordOutput").append("<span class='" + wordToGuess[i] + "'>" + "-" + "</span>");
@@ -79,5 +78,24 @@ function winCheck() {
 function loseCheck() {
     if(lives == 0) {
         $("#faults")[0].textContent = "YOU LOSE!";
+        $("#guess").css("display", "none");
+    }
+}
+
+// resetbutton function
+function reset() {
+    $("#guess").css("display", "flex");
+    $("#faults")[0].textContent = "";
+    lives = 5;
+    wordToGuess = "";
+    wordReset();
+}
+
+// resetting the mysteryword div to it's original content
+function wordReset() {
+    let word = "GUESS THE WORD";
+    $("#mysteryWordOutput").empty();
+    for(let i = 0; i < word.length; i++) {
+        $("#mysteryWordOutput").append("<span class='" + word[i] + "'>" + word[i] + "</span>");
     }
 }
